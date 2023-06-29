@@ -78,6 +78,7 @@
         background-color:var(--negro);
         opacity:.2;
         z-index:500;
+        filter:blur(3px);
     }
     .botonSombra{
         position:absolute;
@@ -89,6 +90,7 @@
         background-color:var(--negro);
         z-index:1000;
         opacity:.2;
+        filter:blur(3px);
         z-index:250;
     }
 /*Parte Interna*/
