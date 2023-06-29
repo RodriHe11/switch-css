@@ -1,0 +1,375 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    /* --b:1px solid #000; */
+    --fondo:#95D0F6;
+    --mandoIzq:#FA4A42;
+    --mandoIzqSombra:#FE9D99;
+    --mandoDrch:#87CEFD;
+    --mandoDrchSombra:#C1E4FB;
+    --joysSombra:#B0B0B0;
+    --blanco:#fff;
+    --negro:#000;
+    --contornoPantalla:#6B6B6B;
+    --fondoPantalla:#2A2A2A;
+    --reflejo:#9F9D9D;
+    --fondoStick:#015D2F;
+}
+.contMaster{
+    outline:var(--b);
+    width:100vw;
+    height:100vh;
+    background-color:var(--fondo);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.contSubMaster{
+    outline:var(--b);
+    width:32rem;
+    height:20rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+/*Parte Externa*/
+    .contorno{
+        outline:var(--b);
+        width:460px;
+        height:200px;
+        border-radius:40px 40px;
+        display:flex;
+        flex-direction:row;
+        z-index:2000;
+    }
+    .botonIzq{
+        outline:var(--b);
+        position:absolute;
+        top:57px;
+        left:26px;
+        height:30px;
+        width:40px;
+        border-radius:40px 0 0 0;
+        background-color:var(--negro);
+        z-index:1000;
+    }
+    .botonDrch{
+        outline:var(--b);
+        position:absolute;
+        top:57px;
+        right:26px;
+        height:30px;
+        width:40px;
+        border-radius:0 40px 0 0;
+        background-color:var(--negro);
+        z-index:1000;
+    }
+    .contornoSombra{
+        position:absolute;
+        top:80px;
+        right:16px;
+        width:460px;
+        height:200px;
+        border-radius:0 40px 40px 40px;
+        background-color:var(--negro);
+        opacity:.2;
+        z-index:500;
+    }
+    .botonSombra{
+        position:absolute;
+        top:70px;
+        right:16px;
+        height:30px;
+        width:40px;
+        border-radius:0 40px 0 0;
+        background-color:var(--negro);
+        z-index:1000;
+        opacity:.2;
+        z-index:250;
+    }
+/*Parte Interna*/
+    /*Mando Izq*/
+    .mandoIzqSombra{
+        border:3px solid var(--negro);
+        border-radius:40px 0 0 40px;
+        width:16%;
+        height:100%;
+        display:flex;
+        justify-content:flex-end;
+        background-color:var(--mandoIzqSombra);
+    }
+    .mandoIzq{
+        width:90%;
+        height:100%;
+        border-radius:40px 0 0 40px;       
+        background-color:var(--mandoIzq);
+        position:relative;
+    }
+    .btnMenos{
+        outline:var(--b);
+        position:absolute;
+        top:13px;
+        right:7px;
+        width:15px;
+        height:4px;
+        background-color:var(--negro);
+    }
+    .stickIzq{
+        position:relative;
+        border:2px solid var(--negro);
+        border-radius:50%;
+        width:40px;
+        height:40px;
+        top:30px;
+        left:5px;
+        background-color:var(--fondoStick);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .lineaX{
+        outline:var(--b);
+        width:100%;
+        height:1px;
+        position:absolute;
+        top:18px;
+        background-color: var(--negro);
+    }
+    .lineaY{
+        outline:var(--b);
+        width:100%;
+        height:1px;
+        position:absolute;
+        top:17px;
+        background-color: var(--negro);
+        transform:rotate(90deg);
+    }
+    .joysSombra{
+        outline:var(--b);
+        width:27px;
+        height:27px;
+        border-radius:50%;
+        background-color:var(--joysSombra);
+        z-index:1000;
+        position:relative;
+    }
+    .joys{
+        position:absolute;
+        right:0;
+        width:24px;
+        height:27px;
+        border-radius:50%;
+        background-color:var(--negro);
+    }
+    .sombraIzq{
+        outline:var(--b);
+        position:absolute;
+        top:0;
+        right:0;
+        width:7%;
+        height:100%;
+        background-color:var(--negro);
+        opacity:.3;
+    }
+    .botoneraPrincIzq{
+        outline:var(--b);
+        width:37px;
+        height:37px;
+        position:relative;
+        top:55px;
+        left:10px;
+        transform:rotate(45deg);
+    }
+    .botonAr,.botonDr,.botonAb,.botonIz{
+        position:absolute;
+        width:15px;
+        height:15px;
+        border-radius:50%;
+        border:2px solid var(--negro);
+        background-color:var(--fondoStick);
+    }
+    .botonAr{
+        top:0;
+    }
+    .botonDr{
+        top:0;
+        right:0;
+    }
+    .botonAb{
+        bottom:0;
+    }
+    .botonIz{
+        bottom: 0;
+        right:0;
+    }
+    .btnSelect{
+        width:15px;
+        height:15px;
+        position:relative;
+        border-radius:3px;
+        border:2px solid var(--negro);
+        background-color:var(--fondoStick);
+        top:80px;
+        left:30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .btnAc{
+        width:7px;
+        height:7px;
+        border-radius:50%;
+        background-color:var(--negro);
+    }
+    /*Pantalla*/
+    .contornoPantalla{
+        outline:var(--b);
+        border:7px solid var(--negro);
+        width:69%;
+        height:100%;
+        align-self: flex-end;
+        border-radius:15px 15px 0 0;
+    }
+    .pantalla{
+        border:8px solid var(--contornoPantalla);
+        width:100%;
+        height:100%;
+        border-radius:7px 7px 0 0;
+        background-color:var(--negro);
+        overflow:hidden;
+    }
+    .pantallaDesactive{
+        width:380px;
+        height:100%;
+    }
+    .lineaG{
+        width:380px;
+        height:50%;
+        background-color:var(--reflejo);
+        margin-bottom:50px;
+        opacity:.4;
+        transform:rotate(-57deg);
+    }
+    .lineaP{
+        width:400px;
+        height:10%;
+        background-color:var(--reflejo);
+        opacity:.4;
+        transform:rotate(-57deg);
+    }
+    /*Mando Drch*/
+    .mandoDrchSombra{
+        border:3px solid var(--negro);
+        border-radius:0 40px 40px 0;
+        width:16%;
+        height:100%;
+        display:flex;
+        justify-content:flex-start;
+        background-color:var(--mandoDrchSombra);
+    }
+    .mandoDrch{
+        width:90%;
+        height:100%;
+        border-radius:0 40px 40px 0;       
+        background-color:var(--mandoDrch);
+        position:relative;
+    }
+    .btnMas{
+        outline:var(--b);
+        position:relative;
+        top:9px;
+        left:7px;
+        width:15px;
+        height:15px;
+    }
+    .lineaA{
+        position:absolute;
+        top:5px;
+        width:100%;
+        height:5px;
+        background-color:var(--negro);
+    }
+    .lineaB{
+        position:absolute;
+        width:100%;
+        height:5px;
+        top:5px;
+        background-color:var(--negro);
+        transform:rotate(90deg);
+    }
+    .stickDrch{
+        position:relative;
+        border:2px solid var(--negro);
+        border-radius:50%;
+        width:40px;
+        height:40px;
+        top:90px;
+        left:15px;
+        background-color:var(--fondoStick);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .joysB{
+        position:absolute;
+        left:0;
+        width:24px;
+        height:27px;
+        border-radius:50%;
+        background-color:var(--negro);
+    }
+    .botoneraPrincDrch{
+        outline:var(--b);
+        width:37px;
+        height:37px;
+        position:relative;
+        top:-10px;
+        left:10px;
+        transform:rotate(45deg);
+    }
+    .botonAr,.botonDr,.botonAb,.botonIz{
+        position:absolute;
+        width:15px;
+        height:15px;
+        border-radius:50%;
+        border:2px solid var(--negro);
+        background-color:var(--fondoStick);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .botoneraPrincDrch p{
+        font-size:10px;
+        color:var(--blanco);
+        transform:rotate(-45deg);
+        opacity:.9;
+    }
+    .btnStart{
+        width:17px;
+        height:17px;
+        position:relative;
+        border-radius:50%;
+        border:2px solid var(--negro);
+        background-color:var(--fondoStick);
+        top:65px;
+        left:12px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .sombraDrch{
+        outline:var(--b);
+        position:absolute;
+        top:0;
+        left:0;
+        width:7%;
+        height:100%;
+        background-color:var(--negro);
+        opacity:.3;
+    }
+
+
