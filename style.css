@@ -4,8 +4,8 @@
     padding:0;
 }
 :root{
-    /* --b:1px solid #000; */
-    --n:1px solid #fff;
+    /* --b:1px solid #000;
+    --n:1px solid #fff; */
     --fondo:#95D0F6;
     --mandoIzq:#FA4A42;
     --mandoIzqSombra:#FE9D99;
@@ -21,6 +21,7 @@
     --desactivo:#F9190B;
     --activo:#5BF90B;
     --fondoSwitch:#ec0404;
+    --fondoPantalla3:#DADADA;
 }
 .contMaster{
     outline:var(--b);
@@ -279,92 +280,215 @@
         opacity:.4;
         transform:rotate(-57deg);
     }
-    .pantallaLogo,.pantallaLogo2,.pantallaLogo3{
-        position:absolute;
-        top:0;
-        width:100%;
-        height:100%;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        visibility:hidden;
-        z-index:500;
-        background-color: var(--negro);
-    }
-    .pantallaLogo2{
-        z-index:300;
-    }
-    .pantallaLogo3{
-        z-index:250;
-        background-color:var(--fondoSwitch);
-    }
-    .logo,.logo2,.logo3{
-        width:40%;
-        height:30%;
-        object-fit: contain;
-    }
-    .logo2{
-        height:60%;
-    }
-    .logo3{
-        /* outline:var(--n); */
-        width:30%;
-        height:90%;
-        display:flex;
-        flex-direction:column;
-        justify-content: flex-start;
-    }
-    .simboloSwitch{
-        /* outline:var(--n); */
-        padding:0 7px;
-        width:100%;
-        height:60%;
-        display:flex;
-        flex-direction:row;
-        justify-content:space-evenly;
-    }
-    .switchIzq,.switchDrch{
-        border:3px solid var(--blanco);
-        width:35%;
-        height:60%;
-        align-self: flex-end;
-        border-radius:15px 0 0 15px;
-        position:relative;
-    }
-    .switchDrch{
-        align-self:flex-start;
-        border-radius:0 15px 15px 0;
-        background-color:var(--blanco);
-    }
-    .cir{
-        /* outline:var(--n); */
-        width:12px;
-        height:12px;
-        border-radius:50%;
-        position:absolute;
-        top:7px;
-        left:4px;
-        background-color: var(--blanco);
-    }
-    .switchDrch > .cir{
-        background-color:var(--fondoSwitch);
-        top:28px;
-    }
-    .tituloNintendo,.tituloSwitch{
-        /* outline:var(--n); */
-        width:100%;
-        height:13%;
-        display:flex;
-        align-items: center;
-        padding:5px 2px;
-    }
-    .tituloSwitch{
-        padding:2px 0;
-    }
-    img{
-        width:100%;
-        height:100%;
-    }
+    /*Pantallas*/
+        .pantallaLogo,.pantallaLogo2,.pantallaLogo3,.pantallaLogo4{
+            position:absolute;
+            top:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            visibility:hidden;
+            z-index:500;
+            background-color: var(--negro);
+        }
+        .logo,.logo2,.logo3{
+            width:40%;
+            height:30%;
+            object-fit: contain;
+        }
+        .pantallaLogo2{
+            z-index:300;
+        }
+        .logo2{
+            height:60%;
+        }
+        .pantallaLogo3{
+            z-index:250;
+            background-color:var(--fondoSwitch);
+        }
+        .logo3{
+            /* outline:var(--n); */
+            width:30%;
+            height:90%;
+            display:flex;
+            flex-direction:column;
+            justify-content: flex-start;
+        }
+        .simboloSwitch{
+            /* outline:var(--n); */
+            padding:0 7px;
+            width:100%;
+            height:60%;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-evenly;
+        }
+        .switchIzq,.switchDrch{
+            border:3px solid var(--blanco);
+            width:35%;
+            height:60%;
+            align-self: flex-end;
+            border-radius:15px 0 0 15px;
+            position:relative;
+        }
+        .switchDrch{
+            align-self:flex-start;
+            border-radius:0 15px 15px 0;
+            background-color:var(--blanco);
+        }
+        .cir{
+            /* outline:var(--n); */
+            width:12px;
+            height:12px;
+            border-radius:50%;
+            position:absolute;
+            top:7px;
+            left:4px;
+            background-color: var(--blanco);
+        }
+        .switchDrch > .cir{
+            background-color:var(--fondoSwitch);
+            top:28px;
+        }
+        .tituloNintendo,.tituloSwitch{
+            /* outline:var(--n); */
+            width:100%;
+            height:13%;
+            display:flex;
+            align-items: center;
+            padding:5px 2px;
+        }
+        .tituloSwitch{
+            padding:2px 0;
+        }
+        .pantallaLogo4{
+            z-index:150;
+            background-color:var(--fondoPantalla3);
+            display:flex;
+            flex-direction:column;
+        }
+        .menuSwitch,.footerSwitch{
+            outline:var(--b);
+            width:100%;
+            height:20%;
+            display:flex;
+            flex-direction:row;
+        }
+        .usuario,.infoSwitch{
+            outline:var(--b);
+            width:50%;
+            height:100%;
+            display:flex;
+            flex-direction: row;
+            padding:0 7px;
+        }
+        .usuario{
+            justify-content: flex-start;
+            align-items: center;;
+        }
+        .usuario > div{
+            outline:var(--b);
+            width:15px;
+            height:15px;
+            border-radius:50%;
+            margin-right:7px;
+            overflow:hidden;
+        }
+        .infoSwitch{
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .infoSwitch > div{
+            outline:var(--b);
+            height:15px;
+            margin-left:7px;
+            font-size:10px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hora{
+            width:30px;
+        }
+        .contenidoSwitch{
+            outline:var(--b);
+            width:100%;
+            height:60%;
+            display:flex;
+            flex-direction:column;
+        }
+        .juegos{
+            width:100%;
+            height:80%;
+            outline:var(--b);
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items:center;
+        }
+        .juegos > div{
+            border:1px solid var(--blanco);
+            width:55px;
+            height:55px;
+            margin:5px;
+        }
+        .btnConsola{
+            outline:var(--b);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:row;
+        }
+        .btnConsola > div{
+            outline:var(--b);
+            width:15px;
+            height:15px;
+            border-radius:50%;
+            background-color: var(--blanco);
+            margin:0 5px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btnConsola > div > i{
+            font-size:9px;
+        }
+        .footerSwitch{
+            outline:var(--b);
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+        .footerSwitch> div:first-child{
+            outline:var(--negro);
+            width:95%;
+            height:80%;
+            border-top:1px solid var(--negro);
+            margin-top:7px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction:row;
+        }
+        .iconoSwitch,.chromecast{
+            outline:var(--b);
+            width:50%;
+            height:80%;
+            display:flex;
+        }
+        .iconoSwitch > i{
+            outline:var(--b);
+            justify-self: flex-start;
+            width:30%;
+            height:100%;
+        }
+        img{
+            width:100%;
+            height:100%;
+        }
     /*Mando Drch*/
     .mandoDrchSombra{
         border:3px solid var(--negro);

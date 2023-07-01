@@ -3,6 +3,7 @@ const btnStart=document.getElementById("start"),
       pantalla2=document.querySelector(".pantallaLogo"),
       pantalla3=document.querySelector(".pantallaLogo2"),
       pantalla4=document.querySelector(".pantallaLogo3"),
+      pantalla5=document.querySelector(".pantallaLogo4"),
       btnAccion=document.querySelector(".btnMenos"),
       btnAc=document.querySelector(".accion"),
       switchDrch=document.querySelector(".switchDrch"),
@@ -60,10 +61,15 @@ async function encender(){
     pantalla4.classList.toggle("ocultar");
 
     await esperar(1500);
+    
     pantalla4.classList.toggle("difum");
+    pantalla4.classList.toggle("mostrar");
+    pantalla5.classList.toggle("mostrar");
+
+    
+    await esperar(1500);
     switchDrch.classList.remove("traslateIzq");
     tituloSwitch.classList.add("none");
-    pantalla4.classList.toggle("mostrar");
 }
 
 function esperar(tiempo){
@@ -80,7 +86,8 @@ async function apagar(){
         e.classList.remove("ocultar");
         e.classList.remove("mostrar");
     });
-    pantalla4.classList.toggle("difum");
+    pantalla5.classList.remove("mostrar");
+    pantalla4.classList.remove("difum");
     switchDrch.classList.remove("traslateIzq");
     tituloSwitch.classList.add("none");
     pantalla1.classList.add("desocultar");
