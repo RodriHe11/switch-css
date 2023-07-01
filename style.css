@@ -287,16 +287,18 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        /* visibility:hidden; */
+        visibility:hidden;
         z-index:500;
         background-color: var(--negro);
     }
     .pantallaLogo2{
         z-index:300;
+        visibility:hidden;
     }
     .pantallaLogo3{
         z-index:250;
-        background-color:var(--fondoSwitch)
+        background-color:var(--fondoSwitch);
+        visibility:hidden;
     }
     .logo,.logo2,.logo3{
         width:40%;
@@ -491,7 +493,7 @@
 }
 .traslateIzq{
     transform:translateY(37px);
-    transition:transform .5s linear;
+    transition:transform .3s linear;
 }
 
 
