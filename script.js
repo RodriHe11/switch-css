@@ -22,31 +22,6 @@ document.addEventListener("click",e=>{
         }
     }
 });
-
-/* async function encender(){
-    btnAc.classList.add("active");
-    btnAccion.style.cssText="justify-content:flex-end";
-    btnAc.style.cssText="background-color:var(--activo)";
-    pantalla1.classList.toggle("ocultar");
-        temporizador=setTimeout(e=>{
-            pantalla2.classList.toggle("mostrar");
-            temporizador=setTimeout(e=>{
-                pantalla2.classList.toggle("ocultar");
-                temporizador=setTimeout(e=>{
-                    pantalla3.classList.toggle("mostrar");
-                    setTimeout(e=>{
-                        switchDrch.classList.add("traslateIzq");
-                        setTimeout(e=>{
-                            tituloSwitch.classList.remove("none");
-                        },500);
-                    },500);
-                    temporizador=setTimeout(e=>{
-                        pantalla3.classList.toggle("ocultar");
-                    },3500);
-                },3500);
-            },3500);
-        },3500);
-} */
 async function encender(){
     btnAc.classList.add("active");
     btnAccion.style.cssText="justify-content:flex-end";
@@ -78,9 +53,14 @@ async function encender(){
     tituloSwitch.classList.remove("none");
 
     await esperar(1000);
+    /*Crear efecto grande*/
+    pantalla4.classList.toggle("difum");
+
+    await esperar(2000);
     pantalla4.classList.toggle("ocultar");
 
     await esperar(1500);
+    pantalla4.classList.toggle("difum");
     switchDrch.classList.remove("traslateIzq");
     tituloSwitch.classList.add("none");
     pantalla4.classList.toggle("mostrar");
@@ -100,6 +80,7 @@ async function apagar(){
         e.classList.remove("ocultar");
         e.classList.remove("mostrar");
     });
+    pantalla4.classList.toggle("difum");
     switchDrch.classList.remove("traslateIzq");
     tituloSwitch.classList.add("none");
     pantalla1.classList.add("desocultar");
