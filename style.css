@@ -5,6 +5,7 @@
 }
 :root{
     /* --b:1px solid #000; */
+    --n:1px solid #fff;
     --fondo:#95D0F6;
     --mandoIzq:#FA4A42;
     --mandoIzqSombra:#FE9D99;
@@ -19,6 +20,7 @@
     --fondoStick:#015D2F;
     --desactivo:#F9190B;
     --activo:#5BF90B;
+    --fondoSwitch:#ec0404;
 }
 .contMaster{
     outline:var(--b);
@@ -294,6 +296,7 @@
     }
     .pantallaLogo3{
         z-index:250;
+        background-color:var(--fondoSwitch)
     }
     .logo,.logo2,.logo3{
         width:40%;
@@ -304,8 +307,59 @@
         height:60%;
     }
     .logo3{
-        outline:1px solid #fff;
-        height:80%;
+        /* outline:var(--n); */
+        width:30%;
+        height:90%;
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+    .simboloSwitch{
+        /* outline:var(--n); */
+        padding:0 7px;
+        width:100%;
+        height:60%;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+    }
+    .switchIzq,.switchDrch{
+        border:3px solid var(--blanco);
+        width:35%;
+        height:60%;
+        align-self: flex-end;
+        border-radius:15px 0 0 15px;
+        position:relative;
+    }
+    .switchDrch{
+        align-self:flex-start;
+        border-radius:0 15px 15px 0;
+        background-color:var(--blanco);
+    }
+    .cir{
+        /* outline:var(--n); */
+        width:12px;
+        height:12px;
+        border-radius:50%;
+        position:absolute;
+        top:7px;
+        left:4px;
+        background-color: var(--blanco);
+    }
+    .switchDrch > .cir{
+        background-color:var(--fondoSwitch);
+        top:28px;
+    }
+    .tituloNintendo,.tituloSwitch{
+        /* outline:var(--n); */
+        width:100%;
+        height:13%;
+        display:flex;
+        align-items: center;
+        padding:5px 2px;
+    }
+    .tituloSwitch{
+        padding:2px 0;
     }
     img{
         width:100%;
@@ -427,13 +481,17 @@
 }
 .desocultar{
     opacity:1;
-    transition: opacity 2s linear;
+    transition: opacity 1s linear;
 }
 .mostrar{
     visibility: visible;
 }
 .none{
     display:none;
+}
+.traslateIzq{
+    transform:translateY(37px);
+    transition:transform .5s linear;
 }
 
 
